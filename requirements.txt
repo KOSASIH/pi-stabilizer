@@ -1,0 +1,4 @@
+requests
+prometheus-client
+grafana-api
+python-json-logger
