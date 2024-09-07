@@ -1,18 +1,19 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Docker files
+Dockerfile
+docker-compose.yml
 
-# Other files and folders
-.settings/
+# Python files
+__pycache__/
+*.pyc
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Config files
+config/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Data files
+data/
+
+# Logs
+logs/
+
+# Virtual environment
+.venv/
