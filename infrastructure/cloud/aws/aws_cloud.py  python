@@ -1,0 +1,28 @@
+import boto3
+
+class AWSCloud:
+    def __init__(self, access_key_id, secret_access_key, region_name):
+        self.ec2 = boto3.client('ec2', aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key, region_name=region_name)
+        self.s3 = boto3.client('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key, region_name=region_name)
+
+    def create_instance(self, instance_type, image_id, security_group_ids):
+        # Create a new EC2 instance
+        response = self.ec2.run_instances(
+            ImageId=image_id,
+            InstanceType=instance_type,
+            SecurityGroupIds=security_group_ids,
+            MaxCount=1,
+            MinCount=1
+        )
+        instance_id = response['Instances'][0]['InstanceId']
+        return instance_id
+
+    def create_bucket(self, bucket_name):
+        # Create a new S3 bucket
+        response = self.s3.create_bucket(Bucket=bucket_name)
+        return response['Bucket']
+
+    def upload_file(self, bucket_name, file_name, file_content):
+        # Upload a file to S3
+        response = self.s3.put_object(Body=file_content, Bucket=bucket_name, Key=file_name)
+        return response
