@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  prometheus:
+    build: .
+    ports:
+      - "9090:9090"
+    depends_on:
+      - pi-stabilizer
+    environment:
+      - PROMETHEUS_CONFIG_FILE=/app/config/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=password
+
+  pi-stabilizer:
+    build: .
+    environment:
+      - PI_STABILIZER_CONFIG_FILE=/app/config/pi-stabilizer.yml
