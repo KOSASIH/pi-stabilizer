@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>PiStabilizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .hero {
+            background-image: url('https://placehold.co/1920x1080');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .btn-primary {
+            background-color: #ff4500;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e03e00;
+        }
+        .features {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .feature-item {
+            margin-bottom: 2rem;
+        }
+        .feature-item i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff4500;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>PiStabilizer</h1>
+            <p>Decentralized, AI-powered stablecoin platform for Pi Coin</p>
+            <a href="#" class="btn-primary">Get Started</a>
+        </div>
+    </div>
+    <div class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+            <i class="fas fa-robot"></i>
+            <h3>AI-Powered Stability</h3>
+            <p>Utilizes machine learning algorithms to maintain a stable exchange rate of $314.159 for Pi Coin.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-network-wired"></i>
+            <h3>Seamless Integration</h3>
+            <p>Integrates with the Pi Network to automatically create and distribute Pi Coin as a stable store of value.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Advanced Econometric Models</h3>
+            <p>Employs advanced econometric models to mitigate price volatility and ensure a reliable medium of exchange.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 PiStabilizer. All rights reserved.</p>
+    </div>
+</body>
+</html>
