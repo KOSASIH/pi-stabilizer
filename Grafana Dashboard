@@ -1,0 +1,26 @@
+{
+  "dashboard": {
+    "panels": [
+      {
+        "title": "CPU Temperature",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "cpu_temperature",
+            "legendFormat": "{{cpu}}"
+          }
+        ]
+      },
+      {
+        "title": "Pi Stability",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "pi_stability",
+            "legendFormat": "{{stability}}"
+          }
+        ]
+      }
+    ]
+  }
+}
